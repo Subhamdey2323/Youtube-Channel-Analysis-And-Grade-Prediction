@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Grade Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; background-color: #f2f2f2; }
+        form { background: white; padding: 30px; border-radius: 8px; width: 300px; margin: auto; }
+        input[type=number], input[type=submit] {
+            width: 100%; padding: 10px; margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">🎬 YouTube Channel Grade Predictor</h2>
+    <form action="/predict" method="post">
+        <label>Video Uploads:</label>
+        <input type="number" name="uploads" step="any" required>
+        <label>Subscribers:</label>
+        <input type="number" name="subscribers" step="any" required>
+        <label>Video Views:</label>
+        <input type="number" name="views" step="any" required>
+        <input type="submit" value="Predict">
+    </form>
+    <h3 align="center">{{ prediction_text }}</h3>
+</body>
+</html>
